@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+    .intro {
+        margin-top: 0%;
+        height: 400px;
+        flex-direction: column; /* 垂直展示以适配移动端 */
+        justify-content: end;   /* 使元素底部与底部对齐 */
+        align-items: center;  /* 水平展示以适配移动端 */
+    }
+
+    .intro-avatar {
+        margin-right: 0;
+    }
+}

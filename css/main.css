@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'MyFont'; /* 自定义字体名称 */
+    src: url('../font/HYTangMeiRen55W.woff2') format('woff2'); /* 引用字体文件路径 */
+}
+
+body {
+    font-family: 'MyFont', sans-serif; /* 设置字体为全局默认 */
+    min-height: 100vh;
+}
+
+.main {
+    box-sizing: border-box;
+    padding: 0% 10%;  /* 控制左右边距 */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#background-day {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: absolute;
+    background-image: url(../img/night01.jpg);
+    background-attachment: fixed;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#background-night {
+    position: absolute;
+    display: none;
+}
+.intro {
+    margin-top: 200px;
+    width: 100%;
+    height: 200px;  
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+}
+
+.intro-avatar {
+    width: 200px;
+    height: 200px;
+    margin-right: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex: 0 0 auto    /* 防止头像被压缩 */
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+}
+
+.intro-info {
+    display: flex;
+    flex-direction: column;  /* 设置为纵向排列 */
+    justify-content: center;  /* 垂直方向居中 */
+}
+
+
+.hi {
+    font-size: 3rem;
+}
+
+.im {
+    font-size: 2rem;
+}
+
+.name {
+    font-size: 2rem;                      /* 字体大小，按需求调整 */
+    position: relative;                   /* 设置相对定位以便创建伪元素 */
+    display: inline-block;                /* 让 span 成为块级元素，支持定位 */
+}
+
+.name::after {
+    content: '';                         /* 创建伪元素 */
+    position: absolute;                 
+    top: 0;                             
+    left: 0;                             
+    right: 0;                            
+    bottom: 0;                           
+    background-color: rgba(255, 182, 193, 0.5); /* 背景色，给一个淡粉色的背景 */
+    z-index: -1;                         /* 将伪元素置于文本后 */
+    border-radius: 8px;                  /* 圆角效果 */
+    transition: background-color 0.3s ease; /* 背景色过渡 */
+}
+
+/* 鼠标悬浮时背景色变化 */
+.name:hover::after {
+    background-color: rgba(255, 182, 193, 0.8); /* 鼠标悬浮时背景色更深 */
+}
+
+.typing-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: 'MyFont', sans-serif;
+}
+
+.typing {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing::before {
+    content: '“'; 
+    font-size: 1rem;
+    margin-right: 8px;
+}
+
+.typing::after {
+    content: '丨”'; 
+    font-size: 1rem;
+    margin-left: 8px;
+}
+
+/* 社交图标 */
+.social-icon {
+    width: 100%;
+    height: 2.2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    transform: scale(0.5)
+}
+
+.social-icon div {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.qq {
+    background-color: rgb(55, 163, 240);
+}
+
+.bilibili {
+    background-color: #FB7299;
+}
+
+.email {
+    background-color: #d44638;
+}
+
+.github {
+    background-color: #181717;
+}
+
+.x {
+    background-color: #242e36;
+}
