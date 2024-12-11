@@ -11,6 +11,7 @@
 body {
     font-family: 'MyFont', sans-serif; /* 设置字体为全局默认 */
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .main {
