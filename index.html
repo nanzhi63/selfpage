@@ -6,11 +6,10 @@
     <title>南栀的主页</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/mobile.css">
-    <script src="./js/main.js"></script>
 </head>
 <body>
     <div id="background-day"></div>
-    <div id="background-night"></div><!-- 用于背景切换 -->
+    <div id="background-night"></div><!-- 用于背景切换（废弃） -->
     <div class="main">
         <div class="intro">
             <div class="intro-avatar">
@@ -54,6 +53,7 @@
             </div>
         </div>
         <section>
+<!-- 站点 -->
             <div class="sites">
                 <div class="sites-items">
                     <div class="sites-square">
@@ -66,14 +66,12 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card1" data-url="https://example3.com">
+                    <div class="card1" data-url="#">
                         <img src="./img/avatar.jpg" alt="头像">
                         <div class="text-content">
                             <p class="title">我的主页</p>
                             <p class="subtitle">个人主页(本站)</p>
                         </div>
-                        <!-- 右下角链接图标 -->
-                        <a href="https://example.com" target="_blank" class="link-icon"></a>
                     </div>
                     <div class="card1" data-url="https://blog.yoruzzz.cn">
                         <img src="./img/avatar.jpg" alt="头像">
@@ -81,12 +79,12 @@
                             <p class="title">我的博客</p>
                             <p class="subtitle">分享我的点点滴滴</p>
                         </div>
-                        <!-- 右下角链接图标 -->
-                        <a href="https://example.com" target="_blank" class="link-icon"></a>
                     </div>
                 </div>
             </div> 
+
 <!-- 作品(与site共用标签) -->
+
             <div class="sites videos">
                 <div class="sites-items">
                     <div class="sites-square video-square">
@@ -97,77 +95,114 @@
                             <span>作品</span>
                         </div>
                     </div>
+                    <div class="detail">
+                        <a href="https://space.bilibili.com/496009437/video"><span class="more">更多</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+                    </div>
                 </div>
                 <div class="works">
-                    <div class="works1">
-                        <img src=".//img/cover/BV1aN411Y7ZD.jpg">
+                    <div class="works1" data-url="https://www.bilibili.com/video/BV1aN411Y7ZD/">
+                        <img src=".//img/cover/BV1aN411Y7ZD.jpg" loading="lazy">
                         <div class="caption">这，就是属于《高木同学》粉丝的社群服务体系！</div>
+                        <div class="tips">联合投稿</div>
                     </div>
-                    <div class="works1">
-                        <img src=".//img/cover/BV15h4y147Qd.png">
+                    <div class="works1" data-url="https://www.bilibili.com/video/BV15h4y147Qd/">
+                        <img src=".//img/cover/BV15h4y147Qd.png" loading="lazy">
                         <div class="caption">【高木同学】同好自建网站分享</div>
+                        <div class="tips">联合投稿</div>
                     </div>
-                    <div class="works1">
-                        <img src=".//img/cover/BV1Kv4y1k7c5.png">
+                    <div class="works1" data-url="https://www.bilibili.com/video/BV15h4y147Qd/">
+                        <img src=".//img/cover/BV1Kv4y1k7c5.png" loading="lazy">
                         <div class="caption">高木同学频道周年庆！</div>
+                        <div class="tips">联合投稿</div>
                     </div>
-                    <div class="works1">
-                        <img src=".//img/cover/BV1ue4y1j733.png">
+                    <div class="works1" data-url="https://www.bilibili.com/video/BV1ue4y1j733/">
+                        <img src=".//img/cover/BV1ue4y1j733.png" loading="lazy">
                         <div class="caption">「高木同学」</div>
                     </div>
-                    <div class="works1">
-                        <img src=".//img/BV15h4y147Qd.png">
-                        <div class="caption">【高木同学】同好自建网站分享</div>
+                    <div class="works1" data-url="https://www.bilibili.com/video/BV1BR4y167X7/">
+                        <img src=".//img/cover/BV1BR4y167X7.png" loading="lazy">
+                        <div class="caption">【高木同学×樱花草】Merry Christmas!</div>
+                        <div class="tips">竖屏</div>
                     </div>
-                    <div class="works1">
-                        <img src=".//img/BV15h4y147Qd.png">
-                        <div class="caption">【高木同学】同好自建网站分享</div>
+                    <div class="works1" data-url="https://www.bilibili.com/video/BV1F3411f7qr/">
+                        <img src=".//img/cover/BV1F3411f7qr.png" loading="lazy">
+                        <div class="caption">高木同学和小花之间的故事</div>
+                    </div>
+                    <div class="works1" data-url="https://www.bilibili.com/video/BV1RW4y1m7kc/">
+                        <img src=".//img/cover/BV1RW4y1m7kc.png" loading="lazy">
+                        <div class="caption">MAD【你从未离去&高木同学】</div>
+                    </div>
+                    <div class="works1" data-url="https://www.bilibili.com/video/BV1Bm4y1X75h/">
+                        <img src=".//img/cover/BV1Bm4y1X75h.png" loading="lazy">
+                        <div class="caption">小米平板5pro国内vs国外宣传片</div>
+                        <div class="tips">转载</div>
+                    </div>
+                    <div class="works1" data-url="https://www.bilibili.com/BV1744y1v7dX/">
+                        <img src=".//img/cover/BV1744y1v7dX.png" loading="lazy">
+                        <div class="caption">智能手表改软件使用比例</div>
+                    </div>
+                    <div class="works1" data-url="https://www.bilibili.com/video/BV1q3411C7jv/">
+                        <img src=".//img/cover/BV1q3411C7jv.png" loading="lazy">
+                        <div class="caption">OPPO WATCH第三方软件安装教程手机教程篇</div>
                     </div>
                 </div>
+            </div> 
+<!-- 文章 -->
+            <div class="sites articles">
+                <div class="sites-items">
+                    <div class="sites-square article-square">
+                        <div class="sites-icon article-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/></svg>
+                        </div>
+                        <div class="site-name">
+                            <span>文稿</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <a href="https://blog.yoruzzz.cn/posts"><span class="more">更多</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
                     </div>
                 </div>
-            </div>       
+            <div class="posts">
+                <div class="posts1 first" data-url="https://blog.yoruzzz.cn">
+                    <p>2024 年 11 月 10 日</p>
+                    <p>Win11安装安卓子系统WSA</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="arrow">
+                        <path fill="#000000" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>
+                </div>
+                <div class="posts1">
+                    <p>2024 年 &nbsp;6 月 &nbsp;5 日</p>
+                    <p>Shiro部署如此简单？！</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="arrow">
+                        <path fill="#000000" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>                      
+                </div>
+                <div class="posts1">
+                    <p>2024 年 &nbsp;2 月 &nbsp;9 日 </p>
+                    <p>PS制作圆角矩形图标</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="arrow">
+                        <path fill="#000000" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                    </svg>                      
+                </div>
+            </div>
+            </div>    
         </section>
+        <section>
+            <div class="end">
+                <p>Design By 南栀</p>丨
+                <a href="#" id="openModal" class="open-link">关于</a>丨
+                <a href="">开源地址</a>
+            </div>
+        </section>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <p>HI,我是南栀。很高兴在这里见到你！</p>
+                <P>如你所见，此站点是我的个人主页，由本人手搓+ChatGPT联合完成，以下是部分设计参考：<br>展示卡片参考：<a href="https://github.com/mx-space/kami">mx-space/kami</a><br>介绍标签参考：<a href="https://github.com/QNquenan/homepage-for-vue3">homepage-for-vue3</a></P>
+                <p>站点字体：<a href="https://github.com/lxgw/kose-font">小赖字体</a></p>
+            </div>
+        </div>
     </div>
-    <script>
-        // 点击跳转事件
-        document.querySelectorAll('.card1, .works1').forEach(function (container) {
-    container.addEventListener('click', function () {
-        // 获取当前元素的 data-url 属性值
-        const url = container.getAttribute('data-url');
-        // 在新标签页打开对应链接
-        window.open(url, '_blank');
-    });
-});
-
-// 响应式设计
-function adjustPadding() {
-    const container = document.querySelector('.main');
-    const minWidth = 768; // 起始宽度
-    const maxPadding = 30; // 最大 padding 百分比
-    const minPadding = 5; // 最小 padding 百分比
-    const screenWidth = window.innerWidth;
-
-    // 如果屏幕宽度超过起始值，动态计算 padding
-    if (screenWidth > minWidth) {
-        // 计算百分比，保持丝滑递增
-        const padding = Math.min(
-            maxPadding,
-            minPadding + ((screenWidth - minWidth) / 5000) * (maxPadding - minPadding)
-        );
-        container.style.padding = `0 ${padding}%`;
-    } else {
-        // 否则恢复最小 padding
-        container.style.padding = `0 ${minPadding}%`;
-    }
-}
-
-// 初始化调整
-adjustPadding();
-
-// 监听窗口变化，实时调整
-window.addEventListener('resize', adjustPadding);
-
-    </script>
+<script src="./js/main.js"></script>
 </body>
 </html>

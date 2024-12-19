@@ -11,16 +11,37 @@
         margin-right: 0;
     }
 
-    .sites-square {
-        width: 8rem;
-    }
-
     .card {
         flex-direction: column;
     }
+
     .card1 {
         width: 100%;
     }
+    
+    .sites-square {
+        transform: scale(0.8);
+        transform-origin: left center;/* 对称中心 */
+    }
+
+    .detail {
+        transform: scale(0.8);
+        transform-origin: right center;
+    }
+
+    .works1 {
+        height: 115.2px;
+        width: 204.8px;
+    }
+    
+    .caption {
+        font-size: 0.8rem;
+    }
+
+    .tips {
+        font-size: 0.64rem;
+    }
+    
 }
 
 @media screen and (min-width: 4000px) {

@@ -5,9 +5,8 @@
 
 @font-face {
     font-family: 'MyFont'; /* 自定义字体名称 */
-    src: url('../font/HYTangMeiRen55W.woff2') format('woff2'); /* 引用字体文件路径 */
+    src: url('../font/XiaolaiMonoSC-Regular.ttf') format('woff2'); /* 引用字体文件路径 */
 }
-
 body {
     font-family: 'MyFont', sans-serif; /* 设置字体为全局默认 */
     width: 100vw;
@@ -18,7 +17,7 @@ body {
 .main {
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     transform-origin: center center; 
     transition: padding 0.3s ease;
@@ -41,6 +40,7 @@ body {
     position: absolute;
     display: none;
 }
+
 .intro {
     margin-top: 200px;
     width: 100%;
@@ -179,6 +179,7 @@ body {
 
 .sites-items {
     height: 3rem;
+    display: flex;
 }
 
 .sites-square {
@@ -204,7 +205,7 @@ body {
 .sites-icon svg {
     width: 100%;
     height: 100%;
-    transform: scale(0.5)
+    transform: scale(0.45)
 }
 
 
@@ -216,7 +217,7 @@ body {
     justify-content: center;
 }
 
-.site-name span {
+.site-name span{
     font-size: 1.2rem;
     font-weight: bold;
     color: #ffff;
@@ -237,6 +238,7 @@ body {
     margin-top: 2rem;
     padding: 15px 20px;
     width: 40%;
+    height: 100%;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.2); /* 半透明背景 */
     backdrop-filter: blur(10px); /* 毛玻璃效果 */
@@ -244,14 +246,18 @@ body {
     color: white;
     box-sizing: border-box;
     cursor: pointer; /* 鼠标悬停时变小手 */
+    transition: all 0.3s;
+}
+
+.card1:hover {
+    transform: translateY(-8px) scale(1.01,1.01);
 }
 
 /* 图片样式 */
 .card1 img {
     width: 60px;
     height: 60px;
-    border-radius: 50%; /* 圆形图片 */
-    object-fit: cover;
+    border-radius: 50%;
 }
 
 /* 文字容器 */
@@ -274,19 +280,8 @@ body {
     color: #514545;
 }
 
-/* 右下角图标 */
-.link-icon {
-    margin-left: auto;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    background-image: url(#);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
 
-.videos {
+.videos , .articles {
     margin-top: 3rem;
 }
 
@@ -296,6 +291,45 @@ body {
 
 .video-icon {
     background-color: #ea4876;
+}
+
+.detail {
+    height: 3rem;
+    width: 4.8rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FB7299;
+    border-radius: 16px;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+.detail a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 0.5rem;
+}
+
+.detail svg {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.more {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.detail:hover .more{
+    display: none;
 }
 
 .works {
@@ -308,7 +342,7 @@ body {
 }
 
 .works::-webkit-scrollbar {
-    height: 10px; /* 滚动条高度 */
+    height: 12px; /* 滚动条高度 */
 }
 
 .works::-webkit-scrollbar-thumb {
@@ -346,7 +380,7 @@ body {
     transform: scale(1.1); /* 放大10% */
 }
 
-.works1 .caption {
+.caption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -356,13 +390,149 @@ body {
     background: rgba(0, 0, 0, 0.4); /* 半透明背景 */
     backdrop-filter: blur(10px); /* 添加毛玻璃模糊效果 */
     -webkit-backdrop-filter: blur(10px); /* 兼容 Safari */
-    padding: 10px 10px 10px 1em;
+    padding: 10px 10px 10px 1rem;
     box-sizing: border-box;
     white-space: nowrap; 
-    transition: color 0.5s ease, text-shadow 0.5s ease; /* 平滑过渡 */
+    transition: all 0.5s ease
 }
 
 .works1 .caption:hover {
-    color: #63c5da; /* 好看的淡蓝色 */
+    color: #63c5da; 
     text-shadow: 0 2px 10px rgba(99, 197, 218, 0.5); /* 添加淡蓝光晕 */
+}
+
+.tips {
+    font-size: 0.8rem;
+    font-family: 'Arial', sans-serif;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: #FB7299;
+    padding: 4px;
+    color: #ffffff;
+}
+
+.article-square {
+    background-color: #e7be8f; 
+}
+
+.article-icon {
+    background-color: #dba86f;
+}
+.articles .detail {
+    background-color: #e7be8f;
+}
+.posts {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.first {
+    margin-top: 2rem;
+}
+
+.posts1 {
+    height: 4rem;
+    display: flex;
+    border: 1.5px solid #cccccc;
+    padding: 0 1.5rem;
+    align-items: center;
+    border-radius: 15px;
+    gap: 2rem;
+    justify-content: flex-start;
+    cursor: pointer; 
+    transition: all 0.3s ease;
+}
+
+.posts1:hover {
+    background-color: #e0e0e0;
+}
+.posts1 p {
+    display: inline-block;
+}
+
+.arrow {
+    height: 1.2rem;
+    width: 1.2rem;
+    overflow: hidden;
+    margin-left: auto;
+}
+
+.end {
+    position: relative;
+    bottom: 1rem;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 88px;
+    height: 2rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.end a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.end a:hover {
+    color: #FB7299;
+}
+
+/* 背景模态框 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 半透明黑色背景 */
+    backdrop-filter: blur(5px); /* 背景模糊效果 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 弹窗内容 */
+.modal-content {
+    position: relative;
+    background: white;
+    border-radius: 15px; 
+    padding: 20px;
+    width: 300px;
+    max-width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 卡片阴影效果 */
+    text-align: center;
+    animation: fadeIn 0.3s ease; 
+}
+
+/* 关闭按钮 */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
