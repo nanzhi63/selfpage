@@ -11,6 +11,13 @@
         margin-right: 0;
     }
 
+    .Easter-egg {
+        position: absolute;
+        top: 20px;
+        height: 2rem;
+        width: 0rem; 
+    }
+
     .card {
         flex-direction: column;
     }
@@ -36,12 +43,26 @@
     
     .caption {
         font-size: 0.8rem;
+        padding: 8px 8px 8px 1rem;
+    }
+    
+    .anime1 .caption {
+        font-size: 0.65rem;
     }
 
     .tips {
         font-size: 0.64rem;
     }
+
+    .year {
+        display: none;   
+    }
     
+    .anime1 {
+        width: 128px;
+        height: 192px;
+    }
+
 }
 
 @media screen and (min-width: 4000px) {

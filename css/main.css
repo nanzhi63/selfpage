@@ -5,40 +5,33 @@
 
 @font-face {
     font-family: 'MyFont'; /* 自定义字体名称 */
-    src: url('../font/XiaolaiMonoSC-Regular.ttf') format('woff2'); /* 引用字体文件路径 */
+    src: url('../font/LXGWWenKaiLite-Regular.ttf') format('woff2'); /* 引用字体文件路径 */
 }
+
 body {
     font-family: 'MyFont', sans-serif; /* 设置字体为全局默认 */
     width: 100vw;
-    height: 100vh;
+    min-width: 100vh;
     overflow-x: hidden;
+}
+
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg.jpg) center/cover fixed;
+    z-index: -2; 
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: darken;
 }
 
 .main {
     box-sizing: border-box;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     transform-origin: center center; 
     transition: padding 0.3s ease;
-}
-
-#background-day {
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    background-image: url(../img/background.png);
-    background-attachment: fixed;
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#background-night {
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    display: none;
 }
 
 .intro {
@@ -46,8 +39,8 @@ body {
     width: 100%;
     height: 200px;  
     justify-content: center;
-    overflow: hidden;
     display: flex;
+    position: relative;
 }
 
 .intro-avatar {
@@ -57,6 +50,12 @@ body {
     border-radius: 50%;
     overflow: hidden;
     flex: 0 0 auto;    /* 防止头像被压缩 */
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px 5px lightblue; /* 外发光效果 */
+}
+
+.intro-avatar:hover {
+    transform: scale(1.1);
 }
 
 .avatar {
@@ -70,19 +69,53 @@ body {
     justify-content: center;  /* 垂直方向居中 */
 }
 
+.Easter-egg {
+    position: absolute;
+    top: -100px;
+    margin: auto;
+    height: 2rem;
+    width: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(5px); 
+    border-radius: 15px; 
+    color: #000000;
+    overflow: hidden; 
+    transition: all 0.5s ease; 
+}
+
+.Easter-egg p {
+    font-size: 1rem;
+    opacity: 0; /* 初始文字隐藏 */
+    transition: opacity 0.5s ease; /* 平滑显示文字 */
+}
+
+.intro-avatar:hover ~ .Easter-egg {
+    width: 18rem; 
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* 增加发光效果 */
+}
+
+.intro-avatar:hover ~ .Easter-egg p {
+    opacity: 1; /* 显示文字 */
+}
 
 .hi {
     font-size: 3rem;
+    color: #ffffff;
 }
 
 .im {
     font-size: 2rem;
+    color: #ffffff;
 }
 
 .name {
     font-size: 2rem;                      /* 字体大小，按需求调整 */
     position: relative;                   /* 设置相对定位以便创建伪元素 */
     display: inline-block;                /* 让 span 成为块级元素，支持定位 */
+    color: #ffffff;
 }
 
 .name::after {
@@ -92,15 +125,15 @@ body {
     left: 0;                             
     right: 0;                            
     bottom: 0;                           
-    background-color: rgba(255, 182, 193, 0.5); /* 背景色，给一个淡粉色的背景 */
+    background-color: rgba(246, 175, 185, 0.5); /* 背景色，给一个淡粉色的背景 */
     z-index: -1;                         /* 将伪元素置于文本后 */
     border-radius: 8px;                  /* 圆角效果 */
     transition: background-color 0.3s ease; /* 背景色过渡 */
 }
 
 /* 鼠标悬浮时背景色变化 */
-.name:hover::after {
-    background-color: rgba(255, 182, 193, 0.8); /* 鼠标悬浮时背景色更深 */
+.name:hover::after{
+    background-color: rgba(244, 161, 174, 0.8); /* 鼠标悬浮时背景色更深 */
 }
 
 .typing-container {
@@ -115,6 +148,7 @@ body {
 .typing {
     white-space: nowrap;
     overflow: hidden;
+    color: #ffffff;
 }
 
 .typing::before {
@@ -186,7 +220,7 @@ body {
     height: 100%;
     width: 9rem;
     border-radius: 16px;    
-    background-color: rgb(160, 75, 185);
+    background-color: #254578;
     overflow: hidden;
     display: flex;
 }
@@ -199,7 +233,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color:  rgb(146, 33, 181);
+    background-color:  #182d4e;
 }
 
 .sites-icon svg {
@@ -226,7 +260,7 @@ body {
 .card {
     width: 100%;
     display: flex;
-    gap: 10%;
+    gap: 6%;
     justify-content: center;
 }
 
@@ -235,7 +269,7 @@ body {
     display: flex;
     align-items: center;
     gap: 15px; /* 图片和文字之间的间隔 */
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 15px 20px;
     width: 40%;
     height: 100%;
@@ -260,6 +294,16 @@ body {
     border-radius: 50%;
 }
 
+.card svg {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    width: 1.2rem;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 40%;
+    transform: scale(0.6);
+}
 /* 文字容器 */
 .text-content {
     display: flex;
@@ -270,19 +314,19 @@ body {
 /* 标题样式 */
 .title {
     font-size: 1rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* 副标题样式 */
 .subtitle {
     font-size: 14px;
     margin: 5px 0 0 0;
-    color: #514545;
+    color: #e0e0e0;
 }
 
 
 .videos , .articles {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .video-square {
@@ -351,7 +395,7 @@ body {
 }
 
 .works::-webkit-scrollbar-track {
-    background-color: #ffffff; /* 滚动条背景色 */
+    background: rgba(0, 0, 0, 0.3); 
     border-radius: 10px;
 }
 
@@ -363,7 +407,7 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     cursor: pointer; /* 鼠标悬停时变小手 */
     flex: 0 0 auto;
     
@@ -412,16 +456,14 @@ body {
     color: #ffffff;
 }
 
-.article-square {
-    background-color: #e7be8f; 
+.article-square ,.articles .detail {
+    background-color: #10a52e; 
 }
 
 .article-icon {
-    background-color: #dba86f;
+    background-color: #0d8425;
 }
-.articles .detail {
-    background-color: #e7be8f;
-}
+
 .posts {
     height: 100%;
     width: 100%;
@@ -431,7 +473,7 @@ body {
 }
 
 .first {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .posts1 {
@@ -441,17 +483,23 @@ body {
     padding: 0 1.5rem;
     align-items: center;
     border-radius: 15px;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: flex-start;
     cursor: pointer; 
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    background: rgba(255, 255, 255, 0.2); /* 半透明背景 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+    color: #ffffff;
 }
 
 .posts1:hover {
     background-color: #e0e0e0;
+    color: #000000;
 }
-.posts1 p {
-    display: inline-block;
+
+.year {
+    margin-right: -2rem;
 }
 
 .arrow {
@@ -459,6 +507,68 @@ body {
     width: 1.2rem;
     overflow: hidden;
     margin-left: auto;
+}
+
+.anime-square , .animes .detail{
+    background-color: #8c2606; 
+}
+
+.anime-icon {
+    background-color: #af2f08;
+}
+
+
+
+.anime {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
+.anime::-webkit-scrollbar {
+    height: 12px;
+}
+
+.anime::-webkit-scrollbar-thumb {
+    background-color: #42c7d8;
+    border-radius: 10px;
+}
+
+.anime::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.anime1 {
+    position: relative;
+    width: 160px;
+    height: 240px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 1rem;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+.anime1 .caption {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.anime1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.anime1:hover img {
+    transform: scale(1.1);
 }
 
 .end {
@@ -472,13 +582,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(5px); 
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
 }
 
 .end a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -536,3 +647,25 @@ body {
         transform: scale(1);
     }
 }
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;  /* 确保雪花不会影响页面交互 */
+    z-index: -1;  
+}
+
+
+#busuanzi_value_site_uv {
+    background-color: #FFB6C1;
+    padding: 0.2rem 0.5rem; 
+    margin: 0 0.2rem;
+    border-radius: 10px; 
+    font-weight: bold; 
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
