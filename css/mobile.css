@@ -54,10 +54,14 @@
         font-size: 0.64rem;
     }
 
-    .year {
+    .year , .month{
         display: none;   
     }
     
+    .month-mobile {
+        white-space: nowrap;
+        display: block;
+    }
     .anime1 {
         width: 128px;
         height: 192px;

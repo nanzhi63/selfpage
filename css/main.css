@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'MyFont'; /* 自定义字体名称 */
-    src: url('../font/LXGWWenKaiLite-Regular.ttf') format('woff2'); /* 引用字体文件路径 */
+    src: url('https://cdn.jsdelivr.net/gh/nanzhi63/selfpage@main/font/LXGWWenKaiLite-Regular.ttf') format('woff2'); /* 引用字体文件路径 */
 }
 
 body {
@@ -19,7 +19,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) center/cover fixed;
+    background: url(https://bu.dusays.com/2023/11/18/65586d1d40056.jpg) center/cover fixed;
     z-index: -2; 
     background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: darken;
@@ -502,6 +502,9 @@ body {
     margin-right: -2rem;
 }
 
+.month-mobile {
+    display: none;
+}
 .arrow {
     height: 1.2rem;
     width: 1.2rem;
