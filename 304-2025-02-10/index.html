@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>304-2-11</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        #player_ad5e7c0184458f24 {
+            width: 95%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="player_ad5e7c0184458f24"></div>
+
+    <script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var player = new DogePlayer({
+                container: document.getElementById('player_ad5e7c0184458f24'),
+                userId: 7682,
+                vcode: 'ad5e7c0184458f24',
+                autoPlay: false
+            });
+        };
+    </script>
+</body>
+</html>
