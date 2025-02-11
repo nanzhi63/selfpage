@@ -15,13 +15,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: Arial, sans-serif;
         }
         #player_ad5e7c0184458f24 {
             width: 95%;
             max-width: 800px;
             aspect-ratio: 16 / 9;
             background: #000;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
         }
     </style>
 </head>
@@ -35,7 +39,8 @@
                 container: document.getElementById('player_ad5e7c0184458f24'),
                 userId: 7682,
                 vcode: 'ad5e7c0184458f24',
-                autoPlay: false
+                autoPlay: false,
+                vtype: 10
             });
         };
     </script>
